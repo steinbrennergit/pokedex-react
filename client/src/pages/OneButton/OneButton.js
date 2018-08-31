@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import BlueBtn from "../../components/BlueBtn";
+import BtnRow from "../../components/BtnRow";
 
 class OneButton extends Component {
     render() {
         return (
-            <BlueBtn />
+            <BtnRow />
         )
     }
 }
