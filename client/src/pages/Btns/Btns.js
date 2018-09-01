@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import BtnRow from "../../components/BtnRow";
+import "./Btns.css"
 
 class Btns extends Component {
     render() {
         return (
-            <BtnRow />
+            <div className="flex-container">
+                <BtnRow />
+                <BtnRow />
+                <BtnRow />
+                <BtnRow />
+                <BtnRow />
+                <BtnRow />
+            </div>
         )
     }
 }
