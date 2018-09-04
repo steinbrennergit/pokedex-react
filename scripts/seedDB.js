@@ -8,13 +8,15 @@ function compare(a, b) {
 
 function pushToDb(seed) {
   db.Pokemon.insertMany(seed).then((err, docs) => {
-    if (err) return console.log(err);
+    if (err) console.log(err);
 
-    console.log(docs);
+    console.log("#####\nseeding done\n#####\n");
+    mongoose.disconnect();
   });
 }
 
 function seedMe() {
+  console.log("#####\nseeding\n#####\n");
   fs.readFile("./data/Pokemon.csv", "utf8", (err, data) => {
     const seed = [];
     const lines = data.split("\n");
@@ -64,7 +66,6 @@ function seedMe() {
       });
 
       seed.shift();
-      console.log(seed);
 
       pushToDb(seed);
     });
@@ -73,8 +74,8 @@ function seedMe() {
 
 // This file removes all Pokemon from our DB,
 // then reads and parses CSV files for import into our DB
-db.Pokemon.remove().then((err) => {
-  if (err) return console.log(err);
+db.Pokemon.remove().then((err, docs) => {
+  if (err) console.log(err);
 
   seedMe();
 });
