@@ -7,13 +7,17 @@ class BlueBtn extends Component {
         pokemon: {}
     }
 
+    getInfo = () => {
+        console.log(this.state.pokemon)
+    }
+
     componentDidMount() {
         this.setState({ pokemon: this.props.data })
     }
 
     render () {
         return (
-            <button className="blue-btn">
+            <button className="blue-btn" onClick={this.getInfo}>
                 <img alt="" className="thumb" src={this.state.pokemon.sprite}></img>
             </button>
         )
