@@ -11,7 +11,11 @@ export default {
   },
   // Gets the pokemon with the given dex num
   getPokemonByDex: function(dex) {
-    return axios.get("/api/pokemon/" + dex);
+    return axios.get("/api/pokemon/dex/" + dex);
+  },
+  // Gets the pokemon with the given indexed name
+  getPokemonByName: function(name) {
+    return axios.get("/api/pokemon/in/" + name);
   },
   // Saves the pokemon with the given id for the user
   savePokemon: function(id) {

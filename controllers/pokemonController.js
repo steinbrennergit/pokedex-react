@@ -17,13 +17,13 @@ module.exports = {
   },
   findByDexNum: function (req, res) {
     db.Pokemon
-      .findOne({ dexNum: req.query })
+      .findOne({ dexNum: req.params.dex })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByName: function (req, res) {
     db.Pokemon
-      .findOne({ indexedName: req.query })
+      .findOne({ indexedName: req.params.name })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

@@ -6,11 +6,11 @@ import "./BtnRow.css";
 // That way we don't have to define them all individually
 const BtnRow = () => (
     <div className="flex-row">
-        <BlueBtn img="https://cdn.bulbagarden.net/upload/2/21/001Bulbasaur.png"/>
-        <BlueBtn img="https://cdn.bulbagarden.net/upload/7/73/004Charmander.png"/>
-        <BlueBtn img="https://cdn.bulbagarden.net/upload/3/39/007Squirtle.png"/>
-        <BlueBtn img="https://cdn.bulbagarden.net/upload/5/5d/010Caterpie.png"/>
-        <BlueBtn img="https://cdn.bulbagarden.net/upload/4/4e/072Tentacool.png"/>
+        <BlueBtn dex="1"/>
+        <BlueBtn dex="2"/>
+        <BlueBtn dex="3"/>
+        <BlueBtn dex="4"/>
+        <BlueBtn dex="5"/>
     </div>
 );
 
