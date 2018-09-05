@@ -4,8 +4,8 @@ const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
     db.Pokemon
-      .find(req.query)
-      .sort({ dexNum: -1 })
+      .find()
+      .sort({ dexNum: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -17,7 +17,7 @@ module.exports = {
   },
   findByDexNum: function (req, res) {
     db.Pokemon
-      .findOne({ dexNum: req.params.dex })
+      .findOne({ dexNum: parseInt(req.params.dex) })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -26,6 +26,9 @@ module.exports = {
       .findOne({ indexedName: req.params.name })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  savePokemon: function (req, res) {
+    res.json(req); // useless method
   },
   create: function (req, res) {
     db.Pokemon

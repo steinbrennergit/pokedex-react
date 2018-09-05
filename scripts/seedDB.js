@@ -75,6 +75,8 @@ function seedMe() {
   });
 }
 
+// db.Pokemon.findOne({ dexNum: 5 }).then((dbModel => console.log(dbModel)));
+
 db.Pokemon.remove().then((err, docs) => {
   if (err) console.log(err);
 

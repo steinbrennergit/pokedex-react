@@ -11,7 +11,7 @@ const userSchema = new Schema({
   favorites: [
     {
       // Store ObjectIds in the array
-      type: [Schema.Types.ObjectId],
+      type: Schema.Types.ObjectId,
       // The ObjectIds will refer to the ids in the Pokemon model
       ref: "Pokemon"
     }
