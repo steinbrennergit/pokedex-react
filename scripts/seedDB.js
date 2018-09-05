@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 const db = require("../models");
 const fs = require("fs");
 
+// This file removes all Pokemon from our DB,
+// then reads and parses CSV files for import into our DB
+
 function compare(a, b) {
   return (a.dexNum - b.dexNum);
 }
@@ -72,8 +75,6 @@ function seedMe() {
   });
 }
 
-// This file removes all Pokemon from our DB,
-// then reads and parses CSV files for import into our DB
 db.Pokemon.remove().then((err, docs) => {
   if (err) console.log(err);
 
