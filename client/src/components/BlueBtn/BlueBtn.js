@@ -13,7 +13,7 @@ class BlueBtn extends Component {
 
     render () {
         return (
-            <button key={this.props.key} className="blue-btn">
+            <button className="blue-btn">
                 <img alt="" className="thumb" src={this.state.pokemon.sprite}></img>
             </button>
         )

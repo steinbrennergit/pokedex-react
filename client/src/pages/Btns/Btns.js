@@ -14,12 +14,8 @@ function fillRows(pokemon) {
 
     arrNest.push([pokemon[150]]);
 
-    // console.log("arrnest", arrNest)
-
-    // arrNest.map(el => console.log(el));
-
     return (
-        arrNest.map(el => <BtnRow arr={el} />)
+        arrNest.map(el => <BtnRow key={`row-${el[0]._id}`} arr={el} />)
     )
 }
 
@@ -53,19 +49,3 @@ class Btns extends Component {
 }
 
 export default Btns;
-
-/*
-for each (unsorted) partition
-
-set first element as pivot
-
-  storeIndex = pivotIndex + 1
-
-  for i = pivotIndex + 1 to rightmostIndex
-
-    if element[i] < element[pivot]
-
-      swap(i, storeIndex); storeIndex++
-
-  swap(pivot, storeIndex - 1)
-*/
