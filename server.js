@@ -3,7 +3,14 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+const passport = require("./config/passport");
+const session = require("express-session");
 const PORT = process.env.PORT || 3001;
+
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: Math.random().toString(36).substring(2), resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
