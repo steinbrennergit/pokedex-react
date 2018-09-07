@@ -1,6 +1,4 @@
-export const actions = () => dispatch => {
-    dispatch({
-     type: 'ACTION',
-     payload: 'result_of_action'
-    })
-   }
+export const changeName = name => ({
+    type: 'CHANGE_NAME',
+    payload: name
+});

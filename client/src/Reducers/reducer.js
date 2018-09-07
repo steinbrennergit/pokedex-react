@@ -1,10 +1,12 @@
-export default (state = {}, action) => {
-    switch (action.type) {
-     case 'ACTION':
+export default (state = {
+  name: "Jimmy"
+}, action) => {
+  switch (action.type) {
+    case 'CHANGE_NAME':
       return {
-       result: action.payload
+        name: action.payload
       }
-     default:
+    default:
       return state
-    }
-   }
+  }
+}
