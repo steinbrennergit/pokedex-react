@@ -1,4 +1,4 @@
-export const changeName = name => ({
-    type: 'CHANGE_NAME',
-    payload: name
+export const displayPokemon = name => ({
+    type: 'DISPLAY_POKEMON',
+    payload: pokemon
 });
