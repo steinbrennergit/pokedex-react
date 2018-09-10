@@ -1,29 +1,42 @@
-export default (state = {
+export const changeName = (state = {
   name: "Jimmy"
 }, action) => {
   switch (action.type) {
     case 'CHANGE_NAME':
       return {
         name: action.payload
-      }
+      };
     default:
-      return state
+      return state;
   }
 }
 
-export default (state = {
-pokemon: "button"
+export const loadPokemon = (state = {
+  pokemon: []
 }, action) => {
   switch (action.type) {
-    case 'DISPLAY_POKEMON' :
-    return {
-      name: action.payload
-    }
-  
+    case 'LOAD':
+      return {
+        pokemon: action.payload
+      };
     default:
-    return state
+      return state;
   }
 }
+
+// export default (state = {
+// pokemon: null
+// }, action) => {
+//   switch (action.type) {
+//     case 'DISPLAY_POKEMON' :
+//     return {
+//       name: action.payload
+//     }
+
+//     default:
+//     return state
+//   }
+// }
 
 
 

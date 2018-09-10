@@ -4,8 +4,8 @@ import "./BtnRow.css";
 
 function fillRow(arr) {
     return (arr.map(el => (
-        <BlueBtn key={el._id} data={el} />
-    )))
+        <BlueBtn key={el._id} sprite={el.sprite} />
+    )));
 }
 
 class BtnRow extends Component {

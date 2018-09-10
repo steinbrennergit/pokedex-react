@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Need auth check middleware
-
+ 
 export default {
   // Gets all pokemon
   getPokemon: function() {
@@ -24,12 +24,12 @@ export default {
     return axios.post("/api/pokemon/" + id);
   },
   userLogin: function(user) {
-    return axios.post("/api/users/login", user);
+    return axios.post("/api/users/login/", user);
   },
   userLogout: function(user) {
-    return axios.post("/api/users/logout", user);
+    return axios.post("/api/users/logout/", user);
   },
   userRegister: function (user) {
-    return axios.post("/api/users/register", user);
+    return axios.post("/api/users/register/", user);
   }
 };

@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import "./BlueScreen.css"
 
 function fillRows(pokemon) {
+    console.log(pokemon);
 
     let arrNest = [];
 
@@ -20,31 +21,13 @@ function fillRows(pokemon) {
 }
 
 class BlueScreen extends Component {
-    state = {
-        pokemon: null
-    }
-
-    componentDidMount() {
-        API.getPokemon().then((res) => {
-            // console.log(this);
-            this.setState({ pokemon: res.data })
-        })
-    }
 
     render() {
-        if (this.state.pokemon) {
-            return (
-                <div className="flex-container">
-                    {fillRows(this.state.pokemon)}
-                </div>
-            )
-        } else {
-            return (
-                <div className="flex-container">
-
-                </div>
-            )
-        }
+        return (
+            <div className="flex-container">
+                {fillRows(this.props.pokemon)}
+            </div>
+        )
     }
 }
 

@@ -1,5 +1,14 @@
 import { combineReducers } from 'redux';
-import reducer from './reducer';
+import { changeName, loadPokemon } from './reducer';
 export default combineReducers({
- names: reducer
+  changeName,
+  pokemonList: loadPokemon
 });
+
+
+//: pokemonList.pokemon
+// {
+//     names: {
+//         name: "Jimmy"
+//     }
+// }
