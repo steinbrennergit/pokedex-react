@@ -1,0 +1,13 @@
+.detail-img {
+    width: 30%;
+    float: left;
+}
+
+#info {
+    float: right;
+}
+
+.card {
+    margin: 0 1%;
+    width: 98%;
+}

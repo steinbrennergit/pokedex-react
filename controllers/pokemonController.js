@@ -3,7 +3,7 @@ const db = require("../models");
 // Defining methods for the pokemonController
 module.exports = {
   findAll: function (req, res) {
-    console.log("finding");
+    // console.log("finding");
     db.Pokemon
       .find()
       .sort({ dexNum: 1 })

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./pages/Home";
-import Empty from "./pages/Empty";
+import Detail from "./pages/Detail";
 import { loadPokemon } from "./actions";
 import API from "./utils/API";
 
@@ -16,6 +16,10 @@ const mapDispatchToProps = dispatch => {
 
 class App extends Component {
 
+  isLoaded() {
+    console.log(this.state);
+  }
+
   componentDidMount() {
     API.getPokemon().then((res) => {
       this.props.load(res.data);
@@ -23,17 +27,26 @@ class App extends Component {
   }
 
   render() {
-    if (this.props.pokemon.length > 0) {
-      return (
-        <Home pokemon={this.props.pokemon} />
-      );
-    } else {
-      return (
-        <Empty />
-      )
-    }
+    return (
+    <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/p/:id" component={Detail} />
+        </Switch>
+    </Router>
+    )
   }
 }
+
+// if (this.props.pokemon.length > 0) {
+//   return (
+//     <Home pokemon={this.props.pokemon} />
+//   );
+// } else {
+//   return (
+//     <Detail />
+//   )
+// }
 
 // const App = (props) => {
 //   return (

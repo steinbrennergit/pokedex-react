@@ -4,10 +4,14 @@ import "./BlueBtn.css";
 
 class BlueBtn extends Component {
 
+    details () {
+        console.log(`/p/${this.props.dexnum}`)
+    }
+
     render () {
         return (
-            <button className="blue-btn">
-                <img alt="" className="thumb" src={this.props.sprite}></img>
+            <button className="blue-btn" onClick={this.details.bind(this)}>
+                <img alt="" className="thumb" src={this.props.sprite} />
             </button>
         )
     }

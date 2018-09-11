@@ -17,3 +17,5 @@
     background: linear-gradient(to bottom, #f57584 0%,#df0f27 9%,#b20a1e 93%,#b20a1e 93%,#f9455a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f57584', endColorstr='#f9455a',GradientType=0 ); /* IE6-9 */
 }
+
+/* Bring bottom piece up, move top piece down to meet in middle */
