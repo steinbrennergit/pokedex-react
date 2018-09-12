@@ -8,27 +8,29 @@ import "./Home.css"
 const mapStateToProps = state => ({ pokemon: state.pokemonList.pokemon });
 
 const mapDispatchToProps = dispatch => {
-    return {dispatch};
-  };
+    return { dispatch };
+};
 
 class Home extends Component {
 
-    isLoaded() {
-        if (this.props.pokemon && this.props.pokemon.length > 1) {
-            return <BlueScreen key="screen" pokemon={this.props.pokemon} />;
-        } else {
-            return;
-        }
-    }
-
     render() {
-        return (
-        <div id="display">
-            <DexTop />
-                {this.isLoaded()}
-            <DexBot />
-        </div>
-        );
+        if (this.props.pokemon && this.props.pokemon.length > 1) {
+            return (
+                <div id="display">
+                    <DexTop />
+                    <BlueScreen key="screen" pokemon={this.props.pokemon} />
+                    <DexBot />
+                </div>
+            );
+        } else {
+            return (
+                <div id="display">
+                    <DexTop closed="closed" />
+
+                    <DexBot closed="closed" />
+                </div>
+            );
+        }
     }
 }
 

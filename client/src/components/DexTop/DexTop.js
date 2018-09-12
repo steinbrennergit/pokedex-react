@@ -5,7 +5,7 @@ class DexTop extends Component {
 
     render() {
         return (
-            <div className="pokedex" id="pokedexTop">
+            <div className={`pokedex ${this.props.closed}`} id="pokedexTop">
                 <div className="halfCircle" id="halfCircleTop"></div>
             </div>
         )

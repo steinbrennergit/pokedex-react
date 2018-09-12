@@ -3,12 +3,13 @@
     border-bottom-right-radius: 15px; */
     border-top: 3px solid black;
     position: fixed;
-    bottom: -10px;
+    bottom: -3px;
+    -webkit-transition: position 2s; /* Safari */
+    transition: position 2s;
 }
 
-#pokedexBottom:active {
-    position: fixed;
-    bottom: 0;
+#pokedexBottom.closed, #pokedexTop.closed {
+    position: static;
 }
 
 #blueCircle {
@@ -28,4 +29,6 @@
     border-bottom-left-radius: 110px;  /* 100px of height + 10px of border */
     border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
     border-top: 0;
+    position: relative;
+    top: -33%;
 }

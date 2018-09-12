@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-// import BlueBtn from "../BlueBtn";
-// import Slider from "../Slider";
 import Card from "../Card";
-import CSSTransitionGroup from "react-addons-css-transition-group"
 import "./BtnRow.css";
 
 class BtnRow extends Component {
@@ -36,7 +33,7 @@ class BtnRow extends Component {
 
     fillRow(arr) {
         return (arr.map((el, i) => (
-            <button className="blue-btn" onClick={this.state.buttons[i].bind(this)}>
+            <button key={el._id} className="blue-btn" onClick={this.state.buttons[i].bind(this)}>
                 <img alt="" className="thumb" src={el.sprite} />
             </button>
         )));
@@ -45,10 +42,8 @@ class BtnRow extends Component {
     render() {
         return (
             <div>
-                <div className="mid-row">
-                    <CSSTransitionGroup transitionName="pokeSlide">
-                        {this.state.visible ? <Card {...this.state.pokemon} /> : <div></div>}
-                    </CSSTransitionGroup>
+                <div className="data-row">
+                    {this.state.visible ? <Card {...this.state.pokemon} /> : <div></div>}
                 </div>
                 <div className="flex-row">
                     {this.fillRow(this.props.arr)}
