@@ -4,6 +4,8 @@
     border-top: 3px solid black;
     position: fixed;
     bottom: -3px;
+    -webkit-transition: position 2s; /* Safari */
+    transition: position 2s;
 }
 
 #pokedexBottom.closed, #pokedexTop.closed {
@@ -27,4 +29,6 @@
     border-bottom-left-radius: 110px;  /* 100px of height + 10px of border */
     border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
     border-top: 0;
+    position: relative;
+    top: -33%;
 }

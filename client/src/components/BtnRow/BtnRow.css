@@ -30,17 +30,3 @@
     max-height: 100%;
     max-width: 100%;
 }
-
-.data-row-enter {
-    height: 0px;
-}
-
-.data-row-enter.data-row-enter-active {
-    height: 100px;
-    -webkit-transition: height .3s ease;
-}
-
-.data-row-leave.data-row-leave-active {
-    height: 0px;
-    -webkit-transition: height .3s ease;
-}

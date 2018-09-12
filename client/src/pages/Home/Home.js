@@ -26,7 +26,6 @@ class Home extends Component {
             return (
                 <div id="display">
                     <DexTop closed="closed" />
-
                     <DexBot closed="closed" />
                 </div>
             );
