@@ -1,9 +1,9 @@
 #pokedexBottom {
     /* border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; */
-    border-top: 2.5px solid black;
+    border-top: 3px solid black;
     position: fixed;
-    bottom: 0;
+    bottom: -10px;
 }
 
 #pokedexBottom:active {
