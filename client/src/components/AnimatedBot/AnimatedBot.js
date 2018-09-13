@@ -1,42 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import "./AnimatedBot.css";
-import Transition from 'react-transition-group/Transition';
+import { CSSTransition } from 'react-transition-group';
 
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-}
-
-const transitionStyles = {
-  entering: { opacity: 0 },
-  entered:  { opacity: 1 },
-};
-
-const Fade = () => (
-  <Transition in={false} timeout={duration}>
-    {(state) => (
-      <div style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        I'm a fade Transition!
+const AnimatedBot = () => {
+  return (
+    <CSSTransition
+      classNames="pokedex-btm"
+      timeout={2500}>
+      <div className={`pokedex pokedex-btm`}>
+        <div className="halfCircle" id="halfCircleBottom">
+          <input className="blueCircle" id="blueCircle" type="button"></input>
+        </div>
       </div>
-    )}
-  </Transition>
-);
-
-class AnimatedBot extends Component {
-    render() {
-        return (
-            <div className={`pokedex ${this.props.closed}`} id="pokedexBottom">
-                <div className="halfCircle" id="halfCircleBottom">
-                    <input className="blueCircle" id="blueCircle" type="button"></input>
-                </div>
-            </div>
-        )
-    }
+    </CSSTransition>
+  )
 }
 
 export default AnimatedBot;

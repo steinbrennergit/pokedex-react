@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DexTop from "../../components/DexTop";
 import DexBot from "../../components/DexBot";
+import AnimatedBot from "../../components/AnimatedBot";
 import BlueScreen from "../../components/BlueScreen";
 import { connect } from "react-redux";
 import "./Home.css"
@@ -19,7 +20,7 @@ class Home extends Component {
                 <div id="display">
                     <DexTop />
                     <BlueScreen key="screen" pokemon={this.props.pokemon} />
-                    <DexBot />
+                    <AnimatedBot />
                 </div>
             );
         } else {

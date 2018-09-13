@@ -42,7 +42,7 @@ class BtnRow extends Component {
     render() {
         return (
             <div>
-                <div className="data-row">
+                <div className="flex-row">
                     {this.state.visible ? <Card {...this.state.pokemon} /> : <div></div>}
                 </div>
                 <div className="flex-row">

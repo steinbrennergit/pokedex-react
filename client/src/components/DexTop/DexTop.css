@@ -11,10 +11,10 @@
     border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border-bottom: 0;
     position: relative;
-    bottom: -31%;
+    bottom: -30%;
 }
 
-#pokedexTop {
+.pokedex-top {
     /* border-top-left-radius: 15px;
     border-top-right-radius: 15px; */
     border-bottom: 3px solid black;
